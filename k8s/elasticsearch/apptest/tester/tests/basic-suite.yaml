@@ -6,7 +6,7 @@ actions:
       curl -XGET "${HEALTH_URL}?wait_for_nodes=${REPLICAS}&timeout=300s" | jq '.number_of_nodes'
     expect:
       stdout:
-        equals: 3
+        equals: 2
 
 - name: Cluster reports green status
   bashTest:
